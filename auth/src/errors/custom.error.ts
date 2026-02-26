@@ -7,6 +7,6 @@ export abstract class CustomError extends Error{
     }
     abstract serialize():{
         message:string;
-        feild?:string;
+        field?:string;
     }[];
 };

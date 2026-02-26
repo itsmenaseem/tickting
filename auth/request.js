@@ -5,7 +5,7 @@ async function post(url, body) {
         const response = await axios.post(url, body);
         console.log(response.data);
     } catch (err) {
-        console.log(err);
+        console.log(err.response.data);
         console.error("Request failed:", err.message);
     }
 }
@@ -16,8 +16,6 @@ async function get(url){
         const response = await axios.get(url);
         console.log(response.data);
     } catch (err) {
-        
-        
         console.error("Request failed:", err.message);
     }
 }
@@ -38,5 +36,6 @@ async function get(url){
 // // post("http://localhost:3001/api/post/d4cc83cf/comment",{content:"new comment!"});
 
 post("http://localhost:3000/api/auth/signup",{
-    email:"addd"
+    email:"naseem@gmail.com",
+    password:"12345678"
 });

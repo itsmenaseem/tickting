@@ -2,7 +2,8 @@ import mongoose from "mongoose";
 
 export async function connectToDB() {
     try {
-        await mongoose.connect("mongodb://auth-db:27017/auth");
+        const URI = process.env.MONGO_URI || "mongodb://auth-db-srv:27017/auth"
+        await mongoose.connect(URI);
         console.log("Connected to database");
     } catch (error: unknown) {
         if (error instanceof Error) {
