@@ -1,7 +1,7 @@
 import { Request,Response } from "express";
 
 import { User } from "../models/auth.model";
-import { BadRequestError } from "../errors/bad-request.error";
+import { BadRequestError } from "@tcuts/common";
 
 const cookieOptions = {
     httpOnly: true,

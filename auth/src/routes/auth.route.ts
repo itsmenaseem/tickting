@@ -1,8 +1,8 @@
 import { Router  } from "express";
 import { login, profile, singup } from "../controllers/auth.controller";
 import { body } from "express-validator";
-import { checkValidationResult } from "../middlewares/check-validation.middleware";
-import { authMiddleware } from "../middlewares/auth.middleware";
+import { authMiddleware, checkValidationResult } from "@tcuts/common";
+
 
 const router = Router();
 

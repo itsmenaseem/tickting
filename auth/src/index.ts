@@ -1,10 +1,10 @@
 import express , {Request,Response} from "express";
 import authRoutes from "./routes/auth.route"
-import { errorMiddleware } from "./middlewares/error.middleware";
 import cookieParser from "cookie-parser"
 import { connectToDB } from "./configs/db.config";
 import  "express-async-error"
 import "dotenv/config"
+import { errorMiddleware } from "@tcuts/common";
 const app = express();
 
 app.use(cookieParser());
